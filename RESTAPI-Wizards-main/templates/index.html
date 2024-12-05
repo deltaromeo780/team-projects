@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+	{% for picture in context["pictures"] %}
+    <div class="image-box">
+        <a href="picture-detail/{{picture.id}}"><img src="{{ picture.url }}" alt=""></a>
+        <div>Posted by {{picture.username}}</div>
+    </div>
+
+	{% endfor %}
+</div>
+{% endblock %}
